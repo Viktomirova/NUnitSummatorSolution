@@ -4,6 +4,7 @@ using System;
 
 namespace Summator.Tests
 {
+    [TestFixture]
     public class Tests
     {
         [SetUp]
@@ -12,6 +13,7 @@ namespace Summator.Tests
         }
 
         [Test]
+        [Category ("Important")]
         public void TestSumTwoPositiveNumbers()
         {
             int result = SummatorClass.Sum(new int[]{5, 2});
@@ -19,6 +21,7 @@ namespace Summator.Tests
         }
         
         [Test]
+        [Category ("Low")]
         public void TestSumOnePositiveNumber()
         {
             int result = SummatorClass.Sum(new int[]{5});
@@ -26,6 +29,7 @@ namespace Summator.Tests
         }
         
         [Test]
+        [Category ("Important")]
         public void TestSumTwoNegativeNumbers()
         {
             int result = SummatorClass.Sum(new int[]{-5, -2});
@@ -33,6 +37,7 @@ namespace Summator.Tests
         }
         
         [Test]
+        [Category ("Critical")]
         public void TestSumEmptyArray()
         {
             int result = SummatorClass.Sum(new int[]{});
@@ -40,6 +45,7 @@ namespace Summator.Tests
         }
 
         [Test]
+        [Category ("Low")]
         public void TestSumBigNumbers()
         {
             int actual =  SummatorClass.Sum(new int[]{ 2000000000, 2000000000, 2000000000 });
@@ -47,6 +53,7 @@ namespace Summator.Tests
         }
         
         [Test]
+        [Category ("Important")]
         public void TestAverageTwoPositiveNumbers()
         {
             double result = SummatorClass.Average(new int[]{5, 7});
@@ -54,6 +61,7 @@ namespace Summator.Tests
         }
         
         [Test]
+        [Category ("Important")]
         public void TestAverageTwoRealNumbers()
         {
             double result = SummatorClass.Average(new int[]{-5, -8});
@@ -62,6 +70,7 @@ namespace Summator.Tests
         }
         
         [Test]
+        [Category ("Critical")]
         public void TestAverageEmptyArray()
         {
             double result = SummatorClass.Average(new int[]{});
